@@ -13,7 +13,8 @@ app.layout = html.Div([
     dbc.NavbarSimple(
         children=[
             dbc.NavItem(dcc.Link('Home', href='/', className='nav-link')),
-            dbc.NavItem(dcc.Link('Álbuns de Fotos', href='/albums', className='nav-link'))
+            dbc.NavItem(dcc.Link('Álbuns de Fotos', href='/albums', className='nav-link')),
+            dbc.NavItem(dcc.Link('Trabalho 1', href='/page/trabalho1', className='nav-link'))
         ],
         brand='Dashboard',
         brand_href='/',
