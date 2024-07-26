@@ -19,6 +19,13 @@ layout = html.Div([
             html.Img(src='/assets/10.jpg', style={'width': '30%', 'margin': '10px'}),
             # Adicione mais fotos para o Trabalho 2
         ]),
+        html.H2("Qr Code"),
+        html.Div([
+            html.Img(src='/assets/qrlabor.png', style={'width': '30%', 'margin': '10px'}),
+            html.Img(src='/assets/qrlabor1.png', style={'width': '30%', 'margin': '10px'}),
+            html.Img(src='/assets/qrlabor2.png', style={'width': '30%', 'margin': '10px'}),
+            # Adicione mais fotos para o Trabalho 2
+        ]),
     ]),
     # Adicione mais álbuns conforme necessário
 ])

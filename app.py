@@ -13,10 +13,11 @@ app.layout = html.Div([
     dbc.NavbarSimple(
         children=[
             dbc.NavItem(dcc.Link('Home', href='/', className='nav-link')),
-            dbc.NavItem(dcc.Link('Álbuns de Fotos', href='/albums', className='nav-link')),
-            dbc.NavItem(dcc.Link('Trabalho 1', href='/page/trabalho1', className='nav-link'))
+            dbc.NavItem(dcc.Link('Qr Codes', href='/trabalho1', className='nav-link')),
+            dbc.NavItem(dcc.Link('Labor ICE Grillz', href='/trabalho2', className='nav-link')),
+            dbc.NavItem(dcc.Link('Álbuns de Fotos', href='/albums', className='nav-link'))
         ],
-        brand='Dashboard',
+        brand='• Guilherme Portugal',
         brand_href='/',
         color='primary',
         dark=True,
@@ -28,7 +29,13 @@ app.layout = html.Div([
 @app.callback(Output('page-content', 'children'),
               [Input('url', 'pathname')])
 def display_page(pathname):
-    if pathname == '/albums':
+    if pathname == '/trabalho1':
+        from pages import trabalho1
+        return trabalho1.layout
+    elif pathname == '/trabalho2':
+        from pages import trabalho2
+        return trabalho2.layout
+    elif pathname == '/albums':
         from pages import albums
         return albums.layout
     else:
