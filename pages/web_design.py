@@ -1,9 +1,8 @@
 from dash import html
 
 layout = html.Div([
-    html.H1("Trabalho 2"),
-    html.P("Descrição detalhada do Trabalho 2"),
-    html.H1("Álbuns de Fotos"),
+    html.H1("Web Design"),
+    html.P("Edições e montagens feitas por mim (Guilherme Portugal), para um empresa de joias dentais."),
     html.Div([
         html.H2("Labor ICE Grillz"),
         html.Div([

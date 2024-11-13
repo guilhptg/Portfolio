@@ -1,7 +1,8 @@
 from dash import html, dcc
 
 layout = html.Div([
-        html.H2("Qr Code"),
+        html.H2("Aplicação de adesivo vinílico"),
+        html.H4('Serviços prestados para empresas privadas no DF e entorno.'),
         html.Div([
             html.Img(src='/assets/qrlabor.png', style={'width': '30%', 'margin': '10px'}),
             html.Img(src='/assets/qrlabor1.png', style={'width': '30%', 'margin': '10px'}),

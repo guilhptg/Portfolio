@@ -1,9 +1,9 @@
 from dash import html, dcc
 
 layout = html.Div([
-    html.H1("Álbuns de Fotos"),
+    html.H1("Resumo"),
     html.Div([
-        html.H2("Trabalho 1"),
+        html.H2("Marketing Digital - WebDesign"),
         html.Div([
             html.Img(src='/assets/2.jpg', style={'width': '30%', 'margin': '10px'}),
             html.Img(src='/assets/3.jpg', style={'width': '30%', 'margin': '10px'}),
@@ -12,7 +12,7 @@ layout = html.Div([
         ]),
     ]),
     html.Div([
-        html.H2("Trabalho 2"),
+        html.H2("WebDesign"),
         html.Div([
             html.Img(src='/assets/4.jpg', style={'width': '30%', 'margin': '10px'}),
             html.Img(src='/assets/8.jpg', style={'width': '30%', 'margin': '10px'}),

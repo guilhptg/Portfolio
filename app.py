@@ -13,13 +13,15 @@ app.layout = html.Div([
     dbc.NavbarSimple(
         children=[
             dbc.NavItem(dcc.Link('Home', href='/', className='nav-link')),
-            dbc.NavItem(dcc.Link('Qr Codes', href='/trabalho1', className='nav-link')),
-            dbc.NavItem(dcc.Link('Labor ICE Grillz', href='/trabalho2', className='nav-link')),
-            dbc.NavItem(dcc.Link('Álbuns de Fotos', href='/albums', className='nav-link'))
+            dbc.NavItem(dcc.Link('Python Projets', href='/python-projects', className='nav-link')),
+            dbc.NavItem(dcc.Link('Web Design', href='/web-design', className='nav-link')),
+            dbc.NavItem(dcc.Link('Marketing Digital', href='/marketing-digital', className='nav-link')),
+            dbc.NavItem(dcc.Link('Comunicação Visual', href='/comunicacao-visual', className='nav-link')),
+            dbc.NavItem(dcc.Link('Contato', href='contato', className='nav-link')),
         ],
         brand='• Guilherme Portugal',
         brand_href='/',
-        color='primary',
+        color='darkblue',
         dark=True,
     ),
     html.Div(id='page-content')
@@ -29,15 +31,24 @@ app.layout = html.Div([
 @app.callback(Output('page-content', 'children'),
               [Input('url', 'pathname')])
 def display_page(pathname):
-    if pathname == '/trabalho1':
-        from pages import trabalho1
-        return trabalho1.layout
-    elif pathname == '/trabalho2':
-        from pages import trabalho2
-        return trabalho2.layout
-    elif pathname == '/albums':
-        from pages import albums
-        return albums.layout
+    if pathname == '/python-projects':
+        from pages import python_projects
+        return python_projects.layout
+    elif pathname == '/web-design':
+        from pages import web_design
+        return web_design.layout
+    elif pathname == '/marketing-digital':
+        from pages import marketing_digital
+        return marketing_digital.layout
+    elif pathname == '/comunicacao-visual':
+        from pages import comunicacao_visual
+        return comunicacao_visual.layout
+    elif pathname == '/contato':
+        from pages import contato
+        return contato.layout
+    elif pathname == '/certificados':
+        from pages import certificados
+        return certificados.layout
     else:
         from pages import home
         return home.layout
