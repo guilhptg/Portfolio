@@ -24,33 +24,50 @@ app.layout = html.Div([
         color='darkblue',
         dark=True,
     ),
-    html.Div(id='page-content')
+    html.Div(id='page-content'),
+    html.H1("Somethings about me"),
+    html.Div([
+        dbc.NavbarSimple(
+            children=[
+                dbc.NavItem(dcc.Link('Python Projets', href='/python-projects', className='nav-link'), ),
+                dbc.NavItem(dcc.Link('Web Design', href='/web-design', className='nav-link')),
+                dbc.NavItem(dcc.Link('Marketing Digital', href='/marketing-digital', className='nav-link')),
+                dbc.NavItem(dcc.Link('Comunicação Visual', href='/comunicacao-visual', className='nav-link')),
+                dbc.NavItem(dcc.Link('Certificados', href='/certificados', className='nav-link')),
+            ],
+            brand='• Guilherme Portugal',
+            color='black',
+            dark=True,
+        )
+    ]),
 ])
+
+
 
 # Callback para atualizar o conteúdo da página
 @app.callback(Output('page-content', 'children'),
               [Input('url', 'pathname')])
 def display_page(pathname):
     if pathname == '/python-projects':
-        from pages import python_projects
+        from templates import python_projects
         return python_projects.layout
     elif pathname == '/web-design':
-        from pages import web_design
+        from templates import web_design
         return web_design.layout
     elif pathname == '/marketing-digital':
-        from pages import marketing_digital
+        from templates import marketing_digital
         return marketing_digital.layout
     elif pathname == '/comunicacao-visual':
-        from pages import comunicacao_visual
+        from templates import comunicacao_visual
         return comunicacao_visual.layout
     elif pathname == '/contato':
-        from pages import contato
+        from templates import contato
         return contato.layout
     elif pathname == '/certificados':
-        from pages import certificados
+        from templates import certificados
         return certificados.layout
     else:
-        from pages import home
+        from templates import home
         return home.layout
 
 if __name__ == '__main__':

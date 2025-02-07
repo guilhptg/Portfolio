@@ -1,7 +1,7 @@
 from dash import html, dcc
 
 layout = html.Div([
-        html.H2("Cerfiticações e Competências"),
+        html.H2("Cerfiticações e Competênciasexi"),
         html.P('Complete o formulário com seus dadaos e nos envie com sua necessidade. Que no prazo mais curto responderemos'),
         html.H3('Leaning and Produtivity'),
         html.Div([

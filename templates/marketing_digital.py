@@ -1,7 +1,13 @@
 from dash import html, dcc
+import os
 
+pasta_assets = '/home/usuario/Documentos/GitHub/Portfolio/assets'
+
+arquivos = os.listdir(pasta_assets)
+print(arquivos)
+# TODO uma lógica para o dono da página adicionar e remover imagens e projetos. Editar a pagina como um todo
 layout = html.Div([
-    html.H1("Resumo"),
+    html.H1("Marketing Digital"),
     html.Div([
         html.H2("Marketing Digital - WebDesign"),
         html.Div([
