@@ -1,7 +1,10 @@
+from pydoc import classname
+
 from dash import html, dcc
 import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # Diretório do script atual
+pasta_assets = os.path.join(BASE_DIR, 'assets')
 
-pasta_assets = '/home/usuario/Documentos/GitHub/Portfolio/assets'
 
 arquivos = os.listdir(pasta_assets)
 print(arquivos)
@@ -15,7 +18,7 @@ layout = html.Div([
             html.Img(src='/assets/3.jpg', style={'width': '30%', 'margin': '10px'}),
             html.Img(src='/assets/5.jpg', style={'width': '30%', 'margin': '10px'}),
             # Adicione mais fotos para o Trabalho 1
-        ]),
+        ], classname='image-gallery'),
     ]),
     html.Div([
         html.H2("WebDesign"),

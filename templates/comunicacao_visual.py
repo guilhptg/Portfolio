@@ -9,7 +9,7 @@ layout = html.Div([
     html.Div([
         html.Img(src='/assets/comunicacao_visual/adesivo_requinte/consultorio_processo_0.jpeg', style={'width': '30%', 'margin': '10px'}),
         # Adicione mais imagens aqui
-    ], style={'display': 'flex', 'flex-wrap': 'wrap', 'justify-content': 'center'}),
+    ], className='image-gallery', style={'display': 'flex', 'flex-wrap': 'wrap', 'justify-content': 'center'}),
 
     # Álbum de fotos do trabalho
     html.H2("Vídeo de demonstração"),
@@ -27,7 +27,7 @@ layout = html.Div([
         html.Img(src='assets/comunicacao_visual/rodoviairia_alexissania/rodoviaria_alexissania_2.jpeg', style={'width': '30%', 'margin': '10px'}),
         html.Img(src='assets/comunicacao_visual/rodoviairia_alexissania/rodoviaria_alexissania_3.jpeg', style={'width': '30%', 'margin': '10px'}),
         # Adicione mais imagens aqui
-    ], style={'display': 'flex', 'flex-wrap': 'wrap', 'justify-content': 'center'}),
+    ], className='image-gallery', style={'display': 'flex', 'flex-wrap': 'wrap', 'justify-content': 'center'}),
 
     # Álbum de fotos do trabalho
     html.H3('Depois'),
@@ -39,7 +39,7 @@ layout = html.Div([
         html.Img(src='assets/comunicacao_visual/rodoviairia_alexissania/rodoviaria_alexissania_8.jpeg', style={'width': '30%', 'margin': '10px'}),
         html.Img(src='assets/comunicacao_visual/rodoviairia_alexissania/rodoviaria_alexissania_11.jpeg', style={'width': '30%', 'margin': '10px'}),
         # Adicione mais imagens aqui
-    ], style={'display': 'flex', 'flex-wrap': 'wrap', 'justify-content': 'center'}),
+    ], className='image-gallery',  style={'display': 'flex', 'flex-wrap': 'wrap', 'justify-content': 'center'}),
 
     # Álbum de fotos do trabalho
     html.H2('Terminal de Vendas de Passagem UTB - Rodoviária do Plano Piloto - Brasilia'),
@@ -49,7 +49,7 @@ layout = html.Div([
         html.Img(src='assets/comunicacao_visual/rodoviaria plano piloto/adesivo_rodoviaria_plano_piloto_2.jpeg', style={'width': '30%', 'margin': '10px'}),
         html.Img(src='assets/comunicacao_visual/rodoviaria plano piloto/adesivo_rodoviaria_plano_piloto_4.jpeg', style={'width': '30%', 'margin': '10px'}),
         # Adicione mais imagens aqui
-    ], style={'display': 'flex', 'flex-wrap': 'wrap', 'justify-content': 'center'}),
+    ], className='image-gallery', style={'display': 'flex', 'flex-wrap': 'wrap', 'justify-content': 'center'}),
 
 
     # Campo de contato
@@ -65,6 +65,6 @@ layout = html.Div([
                          style={'width': '100%', 'height': '100px', 'margin-bottom': '10px'}),
             html.Button("Enviar", style={'padding': '10px 20px', 'background-color': '#007bff', 'color': 'white',
                                          'border': 'none'})
-        ], style={'max-width': '500px', 'margin': '20px auto'})
+        ], className='image-gallery', style={'max-width': '500px', 'margin': '20px auto'})
     ])
 ])

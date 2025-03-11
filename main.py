@@ -3,9 +3,15 @@ from dash import dcc, html
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output
 
+external_stylesheets = [
+    dbc.themes.BOOTSTRAP,
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+]
 # Inicializar o app
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 server = app.server
+
+
 
 # Layout principal com o Localização para roteamento e o Div que conterá as páginas
 app.layout = html.Div([
@@ -25,7 +31,6 @@ app.layout = html.Div([
         dark=True,
     ),
     html.Div(id='page-content'),
-    html.H1("Somethings about me"),
     html.Div([
         dbc.NavbarSimple(
             children=[
@@ -63,12 +68,16 @@ def display_page(pathname):
     elif pathname == '/contato':
         from templates import contato
         return contato.layout
+    elif pathname == '/contratar':
+        from templates import contratar
+        return contratar.layout
     elif pathname == '/certificados':
         from templates import certificados
         return certificados.layout
     else:
         from templates import home
         return home.layout
+
 
 if __name__ == '__main__':
     app.run_server(debug=True)

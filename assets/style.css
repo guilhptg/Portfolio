@@ -1,48 +1,136 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+  background-color: #16213e;
+  color: #ffffff;
+  text-align: center;
+}
+.btn-success {
+    transition: all 0.3s ease-in-out;
+}
+.btn-success:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(45deg, #1a1a2e, #16213e);
+}
+.icon {
+  font-size: 2rem;
+  margin: 10px;
+  transition: transform 0.3s ease-in-out;
 }
 
-h1, h2, h3 {
-    color: #343a40;
+.icon:hover {
+  transform: scale(1.2);
+  color: #FFD700;
+}
+
+
+/* Títulos */
+h2 {
+    color: #0056b3;
+    font-size: 2rem;
     text-align: center;
+    margin: 40px 0 20px;
 }
 
-div {
-    margin: 20px;
+h3 {
+    color: #007bff;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 20px 0;
 }
 
-.contacts {
-    margin-top: 20px;
+h6 {
+    color: #666;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Galeria de Imagens */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
     padding: 20px;
-    background-color: #ffffff;
+}
+
+.image-gallery img {
+    width: 30%;
+    max-width: 300px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
 }
 
-.contacts h2 {
-    color: #007bff;
-    font-size: 1.5em;
-    margin-bottom: 10px;
+.image-gallery img:hover {
+    transform: scale(1.05);
 }
 
-.contacts p {
-    font-size: 16px;
-    margin: 5px 0;
-}
-
-.contacts a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.contacts a:hover {
-    text-decoration: underline;
-}
-
-/* Galeria de Fotos */
-img {
+/* Vídeo */
+video {
+    width: 80%;
+    display: block;
+    margin: 20px auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    margin: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Formulário de Contato */
+.contact-form {
+    max-width: 500px;
+    background: white;
+    padding: 20px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .image-gallery img {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-gallery img {
+        width: 90%;
+    }
 }
